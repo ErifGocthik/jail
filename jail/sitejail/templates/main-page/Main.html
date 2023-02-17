@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+            <ul>
+                {% for point in points %}
+                    <div class="box" style="width: 500px">
+                        <img src="{{ point.image.url }}" alt="" style="width: 300px">
+                        <p class="fir_name" style="font-size: 24px;
+                                                   font-weight: bold;">{{ point.first_name }} {{ point.second_name }}</p>
+                        <p class="desc" style="width: 100%">{{ point.behaviour|linebreaks|linebreaksbr }}</p>
+                        <p>{{ point.date_of_conclusion }}</p>
+                    </div>
+                {% endfor %}
+            </ul>
+        </body>
+    </html>
